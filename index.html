@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Raíz Viva Mercado Natural: alimentos agroecológicos de campesinos de la Sabana, entregados frescos en menos de 24 horas.">
+  <title>Raíz Viva Mercado Natural | Del campo vivo a tu mesa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra superior informativa -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Despachos agroecológicos en Bogotá, Chía, Cajicá y La Sabana</p>
+      <p>Pedidos antes de las 6:00 PM</p>
+    </div>
+  </div>
+
+  <!-- RF-01: Encabezado y navegación -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio"><span class="logo-mark" aria-hidden="true"></span> Raíz Viva <small>Mercado Natural</small></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#catalogo">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Solo botón, sin funcionalidad (requisito del parcial) -->
+      <button type="button" class="btn btn-primary">Hacer pedido</button>
+    </div>
+  </header>
+
+  <!-- Menú inferior solo móvil (enlaces internos, sin JavaScript) -->
+  <nav class="bottom-nav" aria-label="Navegación móvil">
+    <a href="#inicio"><span aria-hidden="true">🏠</span>Inicio</a>
+    <a href="#nosotros"><span aria-hidden="true">🌾</span>Nosotros</a>
+    <a href="#catalogo"><span aria-hidden="true">🧺</span>Productos</a>
+    <a href="#testimonios"><span aria-hidden="true">💬</span>Opiniones</a>
+    <a href="#contacto"><span aria-hidden="true">✉️</span>Contacto</a>
+  </nav>
+
+  <main>
+    <!-- RF-02: Hero -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="chip">🌿 Cosecha fresca de la Sabana · 100% agroecológica</p>
+          <h1>Del campo vivo a tu mesa: alimentos puros que cuidan la tierra y nutren tu hogar.</h1>
+          <p class="lead">Recolectamos al alba de cada ciclo y llevamos a tu cocina la vitalidad intacta de cultivos regenerativos en menos de 24 horas. Cero pesticidas sintéticos, trazabilidad total y pago justo a nuestros campesinos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Explorar cosecha de la semana</a>
+            <a class="btn btn-outline" href="#contacto">Armar canasta personalizada</a>
+          </div>
+          <p class="rating"><strong>★★★★★ 4.9 / 5.0</strong> <small>Confianza de más de 1.800 hogares en La Sabana (dato de ejemplo)</small></p>
+        </div>
+        <figure class="hero-figure">
+          <img src="images/hero.jpg" alt="Canasta de verduras y frutas recién cosechadas" width="560" height="640">
+          <figcaption class="badge badge-top">☀️ <strong>Frescura viva</strong><small>Cosechado hoy a las 5:00 AM</small></figcaption>
+          <figcaption class="badge badge-bottom">🏡 <strong>Comunidad andina</strong><small>+1.800 familias suscritas</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- RF-04: Nosotros -->
+    <section id="nosotros" class="section">
+      <div class="container">
+        <header class="section-head two-col">
+          <div>
+            <p class="eyebrow">Nuestra filosofía regenerativa</p>
+            <h2>Reconectando la ciudad con la sabiduría campesina</h2>
+          </div>
+          <p>Eliminamos intermediarios para que la mayor parte del valor regrese a las manos que cuidan el suelo, con compost vivo, semillas nativas y bioinsumos ancestrales.</p>
+        </header>
+        <div class="story-grid">
+          <article class="panel">
+            <p class="eyebrow">🍃 Alianza Subachoque, Tenjo y Boyacá</p>
+            <h3>Suelo fértil, sin químicos, regado por nacederos andinos</h3>
+            <p>Trabajamos con más de 35 familias campesinas de Sabana Centro y el Valle de Tenza. Con compras planificadas protegemos los polinizadores y recuperamos maíces, papas y tomates criollos.</p>
+            <ul class="stats">
+              <li><strong>35+</strong> Familias aliadas</li>
+              <li><strong>0%</strong> Agroquímicos</li>
+              <li><strong>&lt;24h</strong> Del corte a la mesa</li>
+              <li><strong>100%</strong> Empaque biodegradable</li>
+            </ul>
+          </article>
+          <figure class="quote-card">
+            <img src="images/filosofia.jpg" alt="Paisaje de páramo con cultivos al amanecer" width="480" height="520">
+            <figcaption>
+              <small>Soberanía alimentaria</small>
+              <blockquote>“Cuando comes agroecológico, no compras solo un alimento; custodias el páramo y el agua.”</blockquote>
+              <small>Don Gonzalo y Doña Carmen Ruiz, Finca La Esperanza (ejemplo)</small>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RF-03: Catálogo (Grid) con filtros hechos solo con CSS (radio + :has) -->
+    <section id="catalogo" class="section section-low">
+      <div class="container catalog">
+        <header class="section-head catalog-head">
+          <div>
+            <p class="eyebrow">Cosecha semanal seleccionada</p>
+            <h2>Lo más fresco de nuestro catálogo vivo</h2>
+          </div>
+          <div class="filters" role="radiogroup" aria-label="Filtrar productos">
+            <input type="radio" name="filtro" id="f-todo" checked><label for="f-todo">Todo</label>
+            <input type="radio" name="filtro" id="f-canastas"><label for="f-canastas">Canastas</label>
+            <input type="radio" name="filtro" id="f-frutas"><label for="f-frutas">Frutas andinas</label>
+            <input type="radio" name="filtro" id="f-huerto"><label for="f-huerto">Huerto verde</label>
+            <input type="radio" name="filtro" id="f-despensa"><label for="f-despensa">Despensa</label>
+          </div>
+        </header>
+
+        <div class="grid-products">
+          <article class="card" data-cat="canastas">
+            <img src="images/canasta.jpg" alt="Canasta de mercado con hortalizas y frutas" width="400" height="300">
+            <span class="tag">Más pedida</span>
+            <div class="card-body">
+              <p class="origin">Subachoque y Boyacá · ★ 4.9</p>
+              <h3>Canasta familiar Raíz Viva</h3>
+              <p>Mix semanal de 12 variedades de hortalizas, tubérculos andinos y frutas maduradas al árbol.</p>
+              <div class="card-foot"><p class="price">$85.000 <small>COP</small></p><a class="btn btn-small" href="#contacto">Consultar</a></div>
+            </div>
+          </article>
+          <article class="card" data-cat="frutas">
+            <img src="images/aguacate.jpg" alt="Aguacates Hass partidos" width="400" height="300">
+            <span class="tag">De origen</span>
+            <div class="card-body">
+              <p class="origin">Fresno, Tolima · ★ 5.0</p>
+              <h3>Aguacate Hass agroecológico</h3>
+              <p>Textura mantecosa, cultivado sin agroquímicos en laderas de altura. Por kilo (4-5 unidades).</p>
+              <div class="card-foot"><p class="price">$14.500 <small>COP</small></p><a class="btn btn-small" href="#contacto">Consultar</a></div>
+            </div>
+          </article>
+          <article class="card" data-cat="huerto">
+            <img src="images/tomate.jpg" alt="Tomates chonto en rama" width="400" height="300">
+            <span class="tag">Cosecha de hoy</span>
+            <div class="card-body">
+              <p class="origin">Sáchica, Boyacá · ★ 4.8</p>
+              <h3>Tomate chonto en rama</h3>
+              <p>Sabor dulce, pulpa carnosa y aroma de huerto campesino, madurado al sol. Por kilo.</p>
+              <div class="card-foot"><p class="price">$9.800 <small>COP</small></p><a class="btn btn-small" href="#contacto">Consultar</a></div>
+            </div>
+          </article>
+          <article class="card" data-cat="frutas">
+            <img src="images/fresas.jpg" alt="Fresas silvestres frescas" width="400" height="300">
+            <span class="tag">Frescura máxima</span>
+            <div class="card-body">
+              <p class="origin">Guatavita, Cundinamarca · ★ 4.9</p>
+              <h3>Fresas silvestres de altura</h3>
+              <p>Dulzor concentrado, producidas con control biológico. Canastilla de 500 g.</p>
+              <div class="card-foot"><p class="price">$12.000 <small>COP</small></p><a class="btn btn-small" href="#contacto">Consultar</a></div>
+            </div>
+          </article>
+          <article class="card" data-cat="huerto">
+            <img src="images/kale.jpg" alt="Hojas verdes de kale y rúcula" width="400" height="300">
+            <span class="tag">Superalimento</span>
+            <div class="card-body">
+              <p class="origin">Tenjo, Cundinamarca · ★ 4.9</p>
+              <h3>Mix de hojas y kale rizado</h3>
+              <p>Rúcula, espinaca baby y kale cortados con raíz para conservar firmeza. Paquete de 400 g.</p>
+              <div class="card-foot"><p class="price">$8.900 <small>COP</small></p><a class="btn btn-small" href="#contacto">Consultar</a></div>
+            </div>
+          </article>
+          <article class="card" data-cat="despensa">
+            <img src="images/miel.jpg" alt="Frasco de miel cruda de bosque" width="400" height="300">
+            <span class="tag">Artesanal</span>
+            <div class="card-body">
+              <p class="origin">Santuario de Iguaque · ★ 5.0</p>
+              <h3>Miel cruda de bosque nativo</h3>
+              <p>Sin calentar ni pasteurizar, con propóleo y polen natural. Frasco de vidrio de 500 g.</p>
+              <div class="card-foot"><p class="price">$28.000 <small>COP</small></p><a class="btn btn-small" href="#contacto">Consultar</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RF-04: Beneficios -->
+    <section id="beneficios" class="section">
+      <div class="container">
+        <header class="section-head center">
+          <p class="eyebrow">El compromiso Raíz Viva</p>
+          <h2>Un modelo diseñado para honrar la vida</h2>
+        </header>
+        <ul class="benefits">
+          <li class="panel">
+            <span class="icon" aria-hidden="true">🌿</span>
+            <h3>Frescura de máxima pureza</h3>
+            <p>Cosechamos al amanecer del día de entrega, sin semanas en cuartos fríos industriales.</p>
+            <p class="check">✔ Entrega en menos de 24 horas</p>
+          </li>
+          <li class="panel">
+            <span class="icon" aria-hidden="true">🤝</span>
+            <h3>Comercio justo y regenerativo</h3>
+            <p>Pagamos hasta un 40% más que el mercado convencional y apoyamos la protección de las cuencas.</p>
+            <p class="check">✔ Precios éticos todo el año</p>
+          </li>
+          <li class="panel">
+            <span class="icon" aria-hidden="true">🔁</span>
+            <h3>Suscripción flexible</h3>
+            <p>Pausa tu canasta cuando viajes, cambia la frecuencia o ajusta las variedades con un mensaje.</p>
+            <p class="check">✔ Gestión simple por WhatsApp</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RF-05: Testimonios -->
+    <section id="testimonios" class="section section-low">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Voces de nuestra comunidad</p>
+          <h2>Hogares y cocinas que ya sienten la diferencia</h2>
+          <p><mark>Testimonios ficticios, solo como ejemplo de diseño.</mark></p>
+        </header>
+        <div class="grid-testimonials">
+          <blockquote class="testimonial">
+            <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+            <p>“El sabor de los tomates y las fresas me recordó la finca de mis abuelos. Llevamos 8 meses con la canasta semanal.”</p>
+            <footer><span class="avatar" aria-hidden="true">C</span><span><strong>Camila Restrepo</strong><small>Chapinero Alto · Suscriptora semanal</small></span></footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+            <p>“La frescura del kale y las hierbas aromáticas es insuperable. Saber qué familia cosechó cada producto enaltece nuestra cocina.”</p>
+            <footer><span class="avatar" aria-hidden="true">A</span><span><strong>Chef Alejandro Morales</strong><small>Restaurante El Huerto · Aliado gastronómico</small></span></footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+            <p>“Recomiendo Raíz Viva a mis pacientes con sensibilidades digestivas: la diferencia en la microbiota es radical.”</p>
+            <footer><span class="avatar" aria-hidden="true">S</span><span><strong>Dra. Sofía Vergara</strong><small>Nutricionista clínica</small></span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- RF-05: Preguntas frecuentes -->
+    <section id="preguntas" class="section">
+      <div class="container faq-layout">
+        <div>
+          <p class="eyebrow">Transparencia total</p>
+          <h2>Preguntas frecuentes</h2>
+          <p>Queremos que conozcas cada detalle de cómo cuidamos tu comida desde la siembra hasta tu puerta.</p>
+          <aside class="help-box"><strong>¿Dudas puntuales?</strong><p>Escríbenos por WhatsApp y te orientamos en minutos.</p></aside>
+        </div>
+        <div class="faq">
+          <details open><summary>¿En qué zonas entregan?</summary><p>Cubrimos Bogotá y municipios de La Sabana como Chía, Cajicá, Cota, Tabio, Tenjo, Sopó y La Calera. Entregamos martes y viernes en la mañana.</p></details>
+          <details><summary>¿Cómo garantizan que son productos sin agroquímicos?</summary><p>Usamos un Sistema Participativo de Garantías: visitas periódicas a las parcelas y revisión del agua de riego, el compostaje y la ausencia de pesticidas sintéticos.</p></details>
+          <details><summary>¿Puedo personalizar mi canasta semanal?</summary><p>Sí. Puedes cambiar hasta 3 variedades o añadir productos de despensa campesina antes de cada corte.</p></details>
+          <details><summary>¿Cuáles son los métodos de pago?</summary><p>PSE, Nequi, Daviplata, tarjetas de crédito y pago contra entrega para suscriptores recurrentes.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- RF-06: Formulario -->
+    <section id="contacto" class="section order">
+      <div class="container two-col">
+        <div class="order-text">
+          <p class="eyebrow">Solicitud ágil</p>
+          <h2>Empieza hoy a nutrir tu hogar con verdad de origen</h2>
+          <p>Diligencia el formulario y te confirmaremos la disponibilidad para la próxima ruta de despacho en tu zona.</p>
+          <ul class="perks">
+            <li>✔ Sin contratos de permanencia</li>
+            <li>✔ Respuesta personalizada en menos de 15 minutos hábiles</li>
+            <li>✔ Empaques retornables de fibra natural</li>
+          </ul>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <fieldset class="field">
+            <legend>Frecuencia deseada de entrega</legend>
+            <div class="radios">
+              <label><input type="radio" name="frecuencia" value="semanal" checked> Semanal (-10%)</label>
+              <label><input type="radio" name="frecuencia" value="quincenal"> Quincenal</label>
+              <label><input type="radio" name="frecuencia" value="unico"> Pedido único</label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Marcela Trujillo" required minlength="3"></div>
+          <div class="field-row">
+            <div class="field"><label for="telefono">Teléfono (opcional)</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+57 310 000 0000"></div>
+            <div class="field"><label for="correo">Correo electrónico *</label>
+              <input type="email" id="correo" name="correo" placeholder="tu@hogar.co" required></div>
+          </div>
+          <div class="field"><label for="tipo">Tipo de solicitud *</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Selecciona una opción</option>
+              <option>Información de productos</option>
+              <option>Solicitud de pedido</option>
+              <option>Suscripción semanal</option>
+            </select></div>
+          <div class="field"><label for="mensaje">Mensaje: alergias, preferencias o dudas *</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos qué necesitas" required minlength="10"></textarea></div>
+          <button type="submit" class="btn btn-accent">Enviar solicitud</button>
+          <p class="fineprint">Tus datos están protegidos. Cero spam, solo cosechas vivas.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo">🌱 Raíz Viva</p>
+        <p>Reconectamos la mesa urbana con la fertilidad viva del suelo campesino.</p>
+      </div>
+      <nav aria-label="Navegación secundaria">
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="#catalogo">Canastas semanales</a></li>
+          <li><a href="#nosotros">Nuestra filosofía</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+      <address>
+        <h3>Contacto</h3>
+        <p>📞 <a href="tel:+573108452911">(+57) 310 845 2911</a></p>
+        <p>✉️ <a href="mailto:hola@raizviva.co">hola@raizviva.co</a></p>
+        <p>📍 Cobertura: Bogotá, Chía, Cajicá, Cota, Sopó</p>
+      </address>
+      <p class="promo"><strong>10% OFF en tu primera canasta.</strong> Pídela desde el formulario de contacto.</p>
+    </div>
+    <p class="container copyright"><small>© 2026 Raíz Viva Mercado Natural. Empresa ficticia con fines académicos. Todos los derechos reservados.</small></p>
+  </footer>
+
+</body>
+</html>
